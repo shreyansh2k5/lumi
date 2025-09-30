@@ -1,7 +1,6 @@
 services:
   - type: worker
     name: c-discord-bot
-    env: C
     plan: free
     buildCommand: "./build.sh"
     startCommand: "./discord-bot"
@@ -10,4 +9,3 @@ services:
         sync: false
       - key: GROQ_API_KEY
         sync: false
-
