@@ -1,0 +1,13 @@
+services:
+  - type: worker
+    name: c-discord-bot
+    env: C
+    plan: free
+    buildCommand: "./build.sh"
+    startCommand: "./discord-bot"
+    envVars:
+      - key: DISCORD_TOKEN
+        sync: false
+      - key: GROQ_API_KEY
+        sync: false
+
